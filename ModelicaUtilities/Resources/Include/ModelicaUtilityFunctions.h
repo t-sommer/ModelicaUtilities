@@ -1,6 +1,7 @@
 #pragma once
 
-#include <stdarg.h>
+#include <stddef.h>  // for size_t
+#include <stdarg.h>  // for va_list
 
 
 typedef struct {
