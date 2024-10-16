@@ -8,7 +8,7 @@ class MyExternalObject
     output MyExternalObject externalObject;
 
     external "C" externalObject = MyExternalObject_create(callbacks) annotation (
-      Include = "#include \"MyExternalObject.c\"");
+      Library={"MyExternalLibrary"});
 
   end constructor;
 
@@ -17,8 +17,15 @@ class MyExternalObject
     input MyExternalObject externalObject;
 
   external "C" MyExternalObject_free(externalObject) annotation (
-      Include = "#include \"MyExternalObject.c\"");
+      Library={"MyExternalLibrary"});
 
   end destructor;
 
+  annotation(Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}), graphics={
+          Rectangle(
+            lineColor={160,160,164},
+            fillColor={160,160,164},
+            fillPattern=FillPattern.Solid,
+            extent={{-100.0,-100.0},{100.0,100.0}},
+            radius=25.0)}));
 end MyExternalObject;

@@ -6,6 +6,6 @@ function MyExternalFunction
   output Real y;
 
   external "C" y = MyExternalFunction(u, callbacks) annotation (
-    Include = "#include \"MyExternalFunction.c\"");
+    Library={"MyExternalLibrary"});
 
 end MyExternalFunction;
