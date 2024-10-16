@@ -7,22 +7,25 @@
 
 void * ModelicaUtilityFunctions_getModelicaUtilityFunctions() {
 
-	static ModelicaUtilityFunctions_t s_ModelicaUtilityFunctions;
+	static ModelicaUtilityFunctions_t callbacks;
 
-	s_ModelicaUtilityFunctions.ModelicaMessage                       = ModelicaMessage;
-	s_ModelicaUtilityFunctions.ModelicaFormatMessage                 = ModelicaFormatMessage;
-	s_ModelicaUtilityFunctions.ModelicaVFormatMessage                = ModelicaVFormatMessage;
-	s_ModelicaUtilityFunctions.ModelicaError                         = ModelicaError;
-	s_ModelicaUtilityFunctions.ModelicaFormatError                   = ModelicaFormatError;
-	s_ModelicaUtilityFunctions.ModelicaVFormatError                  = ModelicaVFormatError;
-	s_ModelicaUtilityFunctions.ModelicaAllocateString                = ModelicaAllocateString;
-	s_ModelicaUtilityFunctions.ModelicaAllocateStringWithErrorReturn = ModelicaAllocateStringWithErrorReturn;
+	callbacks.ModelicaMessage                       = ModelicaMessage;
+	callbacks.ModelicaFormatMessage                 = ModelicaFormatMessage;
+	callbacks.ModelicaVFormatMessage                = ModelicaVFormatMessage;
+	callbacks.ModelicaError                         = ModelicaError;
+	callbacks.ModelicaWarning                       = ModelicaWarning;
+	callbacks.ModelicaFormatWarning                 = ModelicaFormatWarning;
+	callbacks.ModelicaVFormatWarning                = ModelicaVFormatWarning;
+	callbacks.ModelicaFormatError                   = ModelicaFormatError;
+	callbacks.ModelicaVFormatError                  = ModelicaVFormatError;
+	callbacks.ModelicaAllocateString                = ModelicaAllocateString;
+	callbacks.ModelicaAllocateStringWithErrorReturn = ModelicaAllocateStringWithErrorReturn;
 
-	return &s_ModelicaUtilityFunctions;
+	return &callbacks;
 }
 
 
-void ModelicaUtilityFunctions_freeModelicaUtilityFunctions(void *functions) {
+void ModelicaUtilityFunctions_freeModelicaUtilityFunctions(void *callbacks) {
 	// nothing to do
 }
 
