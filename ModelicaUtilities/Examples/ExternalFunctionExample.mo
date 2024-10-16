@@ -10,6 +10,6 @@ model ExternalFunctionExample
 
 equation
 
-  y = ModelicaUtilities.Examples.MyExternalFunction(u);
+  y =ModelicaUtilities.Examples.Internal.MyExternalFunction(u);
 
 end ExternalFunctionExample;

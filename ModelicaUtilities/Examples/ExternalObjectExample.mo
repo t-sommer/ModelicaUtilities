@@ -2,7 +2,8 @@ within ModelicaUtilities.Examples;
 model ExternalObjectExample
     extends Modelica.Icons.Example;
 
-  ModelicaUtilities.Examples.MyExternalObject externalObject = ModelicaUtilities.Examples.MyExternalObject();
+  ModelicaUtilities.Examples.Internal.MyExternalObject externalObject=
+      ModelicaUtilities.Examples.Internal.MyExternalObject();
 
     Modelica.Blocks.Interfaces.RealInput u
     annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
@@ -13,7 +14,8 @@ model ExternalObjectExample
 
 equation
 
-  y = ModelicaUtilities.Examples.MyExternalObjectFunction(u, externalObject);
+  y =ModelicaUtilities.Examples.Internal.MyExternalObjectFunction(u,
+    externalObject);
 
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)));
