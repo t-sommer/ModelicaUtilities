@@ -7,7 +7,7 @@
 
 void * ModelicaUtilityFunctions_getModelicaUtilityFunctions() {
 
-	static ModelicaUtilityFunctions_t callbacks;
+	static ModelicaUtilities_t callbacks;
 
 	callbacks.ModelicaMessage                       = ModelicaMessage;
 	callbacks.ModelicaFormatMessage                 = ModelicaFormatMessage;
