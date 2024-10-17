@@ -8,7 +8,7 @@ class Callbacks
     callbacks = ModelicaUtilityFunctions_getModelicaUtilityFunctions()
       annotation (
         Include = "#include \"ModelicaUtilityFunctions.c\"",
-        IncludeDirectory="modelica://ModelicaServices.ModelicaUtilities/Resources/Include"
+        IncludeDirectory="modelica://ModelicaUtilities/Resources/Include"
       );
   end constructor;
 
@@ -18,7 +18,7 @@ class Callbacks
     ModelicaUtilityFunctions_freeModelicaUtilityFunctions(callbacks)
       annotation (
         Include = "#include \"ModelicaUtilityFunctions.c\"",
-        IncludeDirectory="modelica://ModelicaServices.ModelicaUtilities/Resources/Include"
+        IncludeDirectory="modelica://ModelicaUtilities/Resources/Include"
       );
   end destructor;
 
