@@ -18,4 +18,4 @@ typedef struct {
 	char* (*ModelicaAllocateString)(size_t len);
 	char* (*ModelicaAllocateStringWithErrorReturn)(size_t len);
 
-} ModelicaUtilityFunctions_t;
+} ModelicaUtilities_t;
