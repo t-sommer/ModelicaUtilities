@@ -1,6 +1,6 @@
 within ;
-package ModelicaUtilities
+package ModelicaExamples
 
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)));
-end ModelicaUtilities;
+end ModelicaExamples;
