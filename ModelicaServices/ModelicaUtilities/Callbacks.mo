@@ -1,4 +1,4 @@
-within ModelicaServices.ModelicaUtilities;
+within ModelicaUtilities; /* Should be within ModelicaServices.ModelicaUtilities in the end. */
 class Callbacks
   extends ExternalObject;
 
